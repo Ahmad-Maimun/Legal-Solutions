@@ -1,0 +1,68 @@
+@font-face {
+    font-family: Heading-font;
+    src: url(../fonts/EB_Garamond/EBGaramond-VariableFont_wght.ttf)
+}
+@font-face {
+    font-family: paragraph-font;
+    src: url(../fonts/Poppins/Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: sub-paragraph-font;
+    src: url(../fonts/Poppins/Poppins-SemiBold.ttf);
+}
+/* Common Css */
+:root {
+    --primary-color: #B68C5A;
+    --white: #fff;
+    --dark-1: #111111;
+    --dark-2: #414040;
+    --dark-3: #707070;
+    --dark-4: #A0A0A0;
+    --dark-5: #CFCFCF;
+    --dark-6: #E7E7E7;
+    --dark-7: #F3F3F3;
+}
+a {
+    text-decoration: none;
+}
+ul li {
+    list-style: none;
+}
+/* Shared Css */
+.section-heading {
+    font-weight: 800px;
+    font-size: 2.5rem;
+    color: var(--dark-2);
+    margin-bottom: 24px;
+}
+/* Header Css */
+header {
+    margin-top: 50px;
+    .header-section {
+        .menu-list ul {
+            li {
+                margin: 0 15px;
+                a {
+                    color: var(--dark-3);
+                    font-size: 16px;
+                }
+                i {
+                    margin-left: 4px;
+                    color: var(--dark-3);
+                    font-size: 16px;
+                }
+            }
+        }
+        .header-btn {
+            button {
+                width: 220px;
+                height: 64px;
+                background-color: var(--primary-color);
+                font-size: 16px;
+                font-weight: 600;
+                color: var(--white);
+                border-radius: 8px;
+            }
+        }
+    }
+}
