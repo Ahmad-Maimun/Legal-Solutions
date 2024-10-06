@@ -1,5 +1,5 @@
 @font-face {
-    font-family: Heading-font;
+    font-family: heading-font;
     src: url(../fonts/EB_Garamond/EBGaramond-VariableFont_wght.ttf)
 }
 @font-face {
@@ -21,6 +21,9 @@
     --dark-5: #CFCFCF;
     --dark-6: #E7E7E7;
     --dark-7: #F3F3F3;
+    --heading-font: heading-font;
+    --paragraph-font: paragraph-font;
+    --sub-paragraph-font: sub-paragraph-font;
 }
 a {
     text-decoration: none;
@@ -28,12 +31,24 @@ a {
 ul li {
     list-style: none;
 }
+input:focus {
+    outline: none;
+}
 /* Shared Css */
 .section-heading {
     font-weight: 800px;
     font-size: 2.5rem;
     color: var(--dark-2);
     margin-bottom: 24px;
+}
+.paragraph {
+    font-family: var(--paragraph-font);
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 26px;
+}
+.section-margin-top {
+    margin-top: 120px;
 }
 /* Header Css */
 header {
@@ -43,6 +58,7 @@ header {
             li {
                 margin: 0 15px;
                 a {
+                    font-family: var(--paragraph-font);
                     color: var(--dark-3);
                     font-size: 16px;
                 }
@@ -57,6 +73,7 @@ header {
             button {
                 width: 220px;
                 height: 64px;
+                font-family: var(--sub-paragraph-font);
                 background-color: var(--primary-color);
                 font-size: 16px;
                 font-weight: 600;
@@ -65,4 +82,65 @@ header {
             }
         }
     }
+}
+/* Banner CSS */
+.banner-section {
+    margin-top: 50px;
+    padding: 104px 0;
+    border-radius: 8px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--white);
+    text-align: center;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 8px;
+      }
+      .banner-content {
+          position: relative;
+          z-index: 2;
+          h1 {
+            font-family: var(--heading-font);
+            font-weight: 800;
+            font-size: 72px;
+            line-height: 85px;
+            margin-bottom: 24px;
+            max-width: 668px;
+            }
+            p {
+                max-width: 679px;
+                color: var(--dark-6);
+                margin-bottom: 32px;
+              }
+              .search-box {
+                  input {
+                      width: 500px;
+                      height: 64px;
+                      padding: 19px 20px;
+                      border-radius: 8px;
+                      border: none;
+                      color: var(--dark-4);
+                    }
+                    button {
+                        width: 150px;
+                        height: 64px;
+                        margin-left: 24px;
+                        border: none;
+                        background-color: var(--primary-color);
+                        color: white;
+                        border-radius: 8px;
+                        cursor: pointer;
+                        font-family: var(--sub-paragraph-font);
+                        font-weight: 600;
+                        font-size: 20px;
+                      }
+                }
+        }
 }
