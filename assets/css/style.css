@@ -239,4 +239,55 @@ header {
             margin-bottom: 64px;
         }
     }
+    .slider {
+        .carousel-item {
+            img {
+                height: 500px;
+                object-fit: cover;
+                z-index: -1;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 1170px;
+                    height: 500px;
+                    left: 0;
+                    top: 0;
+                    transform: rotate(-180.00deg);
+                }
+            }
+            .carousel-caption {
+                margin: 96px 0;
+                img {
+                    width: 70px;
+                    height: 70px;
+                    margin-bottom: 24px;
+                }
+                h4 {
+                    margin-bottom: 4px;
+                    font-size: 24px;
+                    font-family: var(--heading-font);
+                    font-weight: 800;
+                }
+                span {
+                    display: inline-block;
+                    margin-bottom: 32px;
+                    font-size: 16px;
+                    font-family: var(--paragraph-font);
+                    font-weight: 400;
+                }
+                p {
+                    font-family: var(--paragraph-font);
+                    font-size: 16px;
+                    line-height: 26px;
+                    color: var(--dark-7);
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+    .carousel-control-prev, .carousel-control-next {
+        i {
+            font-size: 22px;
+        }
+    }
 }
