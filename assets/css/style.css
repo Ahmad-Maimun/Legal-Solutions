@@ -244,6 +244,7 @@ header {
             img {
                 height: 500px;
                 object-fit: cover;
+                border-radius: 8px;
                 z-index: -1;
                 &::after {
                     content: '';
@@ -288,6 +289,34 @@ header {
     .carousel-control-prev, .carousel-control-next {
         i {
             font-size: 22px;
+        }
+    }
+}
+/* Questions Section CSS */
+.questions-section {
+    .section-title {
+        p {
+            max-width: 714px;
+            margin: 0 auto 64px;
+            font-size: 16px;
+            line-height: 26px;
+            color: var(--dark-3);
+            font-family: var(--paragraph-font);
+        }
+    }
+    .collapse-section {
+        .collapse-item {
+            background-color: var(--dark-7);
+            padding: 32px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            h4 {
+                margin-bottom: 16px;
+                font-family: var(--heading-font);
+                font-size: 24px;
+                font-weight: 800;
+                color: var(--dark-2);
+            }
         }
     }
 }
